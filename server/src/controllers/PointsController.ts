@@ -51,7 +51,6 @@ class PointsController {
         console.log(city, uf, items)
         const parsedItems = String(items).split(',')
             .map(item => Number(item.trim())); // trim tira os espaços
-        console.log(parsedItems)
         const points = await knex('points')
             .join('point_items', 'points.id', '=', 'point_items.point_id')
             .whereIn('point_items.item_id', parsedItems) // where in = pelo menos um
@@ -59,7 +58,6 @@ class PointsController {
             .where('uf', String(uf))
             .distinct()
             .select('points.*');
-        
         return res.json(points);
     }
 }
