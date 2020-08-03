@@ -7,6 +7,8 @@ import { Ubuntu_700Bold, useFonts } from '@expo-google-fonts/ubuntu';
 
 // JSX - XML dentro do JS
 
+import Routes from './src/routes';
+
 export default function App() {
 
   const [fontsLoaded] = useFonts({
@@ -21,8 +23,8 @@ export default function App() {
 
   return (
     <>
-      <Home/>
       <StatusBar barStyle="dark-content" translucent/>
+      <Routes/>
     </>
   );
 }
