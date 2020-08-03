@@ -79,10 +79,11 @@ const styles = StyleSheet.create({
     description: {
       color: '#6C6C80',
       fontSize: 16,
-      marginTop: 16,
+      marginTop: 8,
       fontFamily: 'Roboto_400Regular',
       maxWidth: 260,
       lineHeight: 24,
+      marginBottom: 24
     },
   
     footer: {},
